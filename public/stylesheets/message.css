@@ -1,0 +1,61 @@
+.message-content{
+	display: flex;
+	width: 100%;
+	min-height: 50rem;
+	justify-content: center;
+}
+.message-form{
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 5rem;
+	width: 80rem;
+	height:40rem;
+	font-family: 微软雅黑;
+	font-size: 1.5rem;
+	color: rgb(102, 102, 102);
+}
+.message-form .row1{
+	display: block;
+	margin-top: 4rem;
+	width: 100%;
+	height: 4rem;
+}
+.message-form .row2{
+	display: inline-block;
+	height: 4rem;
+}
+.row2 div{
+	display: inline-block;
+}
+.row2 div:nth-child(2){
+	margin-left: 1rem;
+}
+.row2 div:nth-child(3){
+	margin-left: 1rem;
+}
+.row2 input{
+	margin-left: 1rem;
+	width: 19.4rem;
+    height: 3rem;
+}
+.row3 textarea{
+	display: inline-block;
+	margin-left: 1.1rem;
+	width: 71rem;
+	height: 10rem;
+}
+#submit{
+	display: block;
+	margin-left: 5rem;
+    padding-top: 1rem;
+    color: #fff;
+    width: 12rem;
+    height: 2.5rem;
+    text-align: center;
+    background-color: #00a1e9;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+#submit:hover{
+	opacity: 0.8;
+}

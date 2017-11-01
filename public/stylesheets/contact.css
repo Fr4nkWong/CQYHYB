@@ -1,0 +1,65 @@
+.contact1{
+	min-height: 120rem;
+}
+.contact1 div:nth-child(1){
+	display: flex;
+	width: 100%;
+	height: auto;
+	margin-top: 7rem;
+	justify-content: center;
+}
+.contact1 div:nth-child(1) img{
+	width: 160px;
+	height: 190px;
+}
+.contact1 .info{
+	width: 100%;
+	margin-top: 5rem;
+	flex-wrap: wrap;
+	text-align: center;
+	color: rgb(51, 51, 51);
+	font-size: 1.5rem;
+	line-height: 3rem;
+	flex-wrap: warp;
+}
+.info div{
+	display: inline-block;
+	margin-right: 6rem;
+}
+.contact_map{
+	display: flex;
+	justify-content: center;
+	align-items:center;
+}
+#map{
+	height: 36rem; 
+	width: 120rem;
+}
+.footer{
+	display: inline-flex;
+	justify-content: center;
+	align-items:center;
+	width: 100%;
+	height: 50rem;
+}
+.footer>img{
+	display: block;
+	width: 535px;
+	height: 287px;
+}
+.footer>div{
+	display: block;
+	width: 40rem;
+	align-items:center;
+	justify-content: center;
+}
+.footer div p{
+	display: block;
+	color: rgb(102, 102, 102);
+	font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 30em){
+	.banner{display: none;}
+	.footer img{display: none;}
+}

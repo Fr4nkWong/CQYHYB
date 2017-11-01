@@ -1,0 +1,40 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-11 col-md-offset-1 main">
+
+  <h2 class="sub-header ">新闻添加</h2>
+  <form method="POST" action="/manager/new_add" class="form-horizontal col-md-5 col-md-offset-2" role="form">
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="new_title">标题：</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="new_title" name="new_title" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="new_id">编号：</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="new_id" name="new_id" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="new_type">类型：</label>
+        <div class="col-sm-9">
+          <select class="form-control" name="new_type">
+            <option value="企业新闻">企业新闻</option>
+            <option value="行业新闻">行业新闻</option>
+            <option value="技术资料">技术资料</option>
+            <option value="产品问答">产品问答</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="new_content">内容：</label>
+        <div class="col-sm-9">
+          <textarea class="form-control" rows="20" name="new_content" id="new_content"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <button type="reset" class="btn btn-default col-sm-1 col-sm-offset-6" id="reset">重置</button>
+        <button type="submit" class="btn btn-default col-sm-1 col-sm-offset-1" id="submit">提交</button>
+      </div>
+    </form>
+
+</div>

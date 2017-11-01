@@ -1,0 +1,130 @@
+.table_card { 
+	display: flex;
+	margin:0 auto;
+	margin-top: 5rem;
+	width:100%;
+	min-height: 50rem;
+}
+.table_card .tab { 
+	display: block;
+ 	margin-left: 5rem;
+ 	padding-right: 10rem;
+	width: 20rem;
+ 	font-size: 1.5rem;
+ 	border-right: 1px #e1e1e1 solid;
+ }
+ .table_card .tab li { 
+ 	display: inline-block;
+ 	width:15rem;
+ 	height: 3.5rem;
+ 	line-height:3.6rem; 
+ 	margin-right:6rem; 
+ 	margin-top: 1rem;
+ 	padding-top: 0.2rem;
+ 	padding-bottom: 0.5rem;
+ 	border-top:1px #e1e1e1 solid; 
+ 	border-left:1px #e1e1e1 solid; 
+ 	border-right:1px #e1e1e1 solid;
+ 	border-radius: 2rem;
+ 	background-color:rgb(62, 62, 62);
+ 	color:#fff;
+ 	font-size: 1.5rem;
+ 	text-align: center;
+ }
+.table_card .tab li:hover { 
+	background-color:#00a1e9; 
+	color:#fff; 
+	cursor:pointer;
+}
+.table_card .activ { 
+	height:3.7rem !important; 
+	background:#00a1e9 !important; 
+	color:#fff;
+}
+.table_card .tab_content div { 
+	width: 100%;
+	display:none;
+}
+.table_card .tab_content .on { 
+	display:block;
+}
+.tab_content{
+	display: flex;
+	justify-content: space-between;
+	margin-left: 2rem;
+	height: 100%;
+	width: 80rem;
+}
+.tab_content a:focus , a:link, a:active { outline:none}
+.tab_content a:hover { color:rgb(0, 161, 233);}
+.newslist { 
+	width:100%;
+	font-size:1.4rem; 
+	}/*新闻序列样式*/
+.newslist li { 
+	width: 100%;
+	line-height:3.6rem;
+	cursor: pointer;
+	}/*每个新闻项样式*/
+.newslist li .time { 
+	float:right; 
+	font-size:1.2rem; 
+	color:#888;
+}
+.newslist li a{
+	text-decoration: none;
+	color: #222;
+}
+
+/*article*/
+.article-wrapper{
+	position: relative;
+	display: block;
+	justify-content: center;
+	width: 100%;
+	min-height: 45rem;
+	border-bottom: 5rem;
+}
+.article-wrapper h1{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	font-size: 1.6rem;
+}
+.article-wrapper p{
+	display: flex;
+	position: absolute;
+	width: 50%;
+	left: 25%;
+	top: 5rem;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	word-wrap: break-word;
+	text-indent: 5rem;
+}
+
+@media only screen and (max-width: 30em){
+	.banner{display: none;}
+	.table_card{margin: 0 0;padding:0 0;flex-wrap: wrap;}
+	.table_card .tab {
+		display:flex;
+		justify-content: center;
+		margin: 0 0;
+		padding: 0 0;
+		width: 100%;
+		height: 5em;
+		border-bottom: 1px #e1e1e1 solid;
+	}
+	.table_card .tab li{
+		display: inline-block;
+		margin: 0 0;
+		padding:0 0;
+		margin-top: 1em;	
+	}
+	.tab_content{
+		display: block;
+		margin: 0 0;
+	}
+	.newslist{margin:0 0;padding:0 0;list-style: none;}
+	.newslist li a{display:inline-block;word-break: break-all;margin-left: 1em;}
+}

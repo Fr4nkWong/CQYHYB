@@ -1,0 +1,42 @@
+html,body{
+	height: 100%;
+	width: 100%;
+}
+#banner{
+	background-size: cover;
+	transform: matrix(1, 0, 0, 1, 0, 0);
+	-webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+	-moz-transform: matrix(1, 0, 0, 1, 0, 0);
+	transition: all 500ms linear;
+	-webkit-transition: all 500ms linear;
+	-moz-transition: all 500ms linear;
+}
+.banner0{
+	background: url(../images/banner8.jpg) no-repeat center center;
+}
+.banner1{
+	background: url(../images/banner9.jpg) no-repeat center center;
+}
+.banner2{
+	background: url(../images/banner10.jpg) no-repeat center center;
+}
+form{
+	position: absolute;
+	top: 22em;
+	left: 45%;    
+	height: 15em;
+	padding-top: 3em;
+	border:1px solid #ccc;
+	border-radius: 2px;
+	background-color: #fff;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+button{
+	margin-top: 0.5em;
+}
+#reset{
+	margin-left: 29%;
+}
+#submit{
+	margin-left: 17%;
+}

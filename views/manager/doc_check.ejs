@@ -1,0 +1,33 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-11 col-md-offset-1 main">
+
+          <h2 class="sub-header">文档查看</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>编号</th>
+                  <th>文件名</th>
+                  <th>类型</th>
+                  <th>日期</th>
+                  <th>操作1</th>
+                  <th>操作2</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% for(i in info){ %>
+                  <tr data-id="<%= info[i].id %>">
+                    <td><%= info[i].id%></td>
+                    <td><%= info[i].url%></td>
+                    <td><%= info[i].type %></td>
+                    <td><%= info[i].date %></td>
+                    <td><button class="btn btn-default">详情</button></td>
+                    <td><button class="btn btn-default del">删除</button></td>
+                  </tr>
+                <% } %>
+              </tbody>
+            </table>
+          </div>
+          <div class="page-wrapper">
+            <ul class="page" maxshowpageitem="5" pagelistcount="10" id="page"></ul>
+          </div>
+        </div>

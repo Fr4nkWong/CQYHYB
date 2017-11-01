@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+  <title><%=title%></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta name="description" content="重庆远华仪表" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/libs/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/manager.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/plugins/page.css" />
+</head>
+<body>
+  <div class="container-flux">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button> -->
+          <a class="navbar-brand" href="/manager">后台管理</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">设置</a></li>
+            <li><a class="exit" href="/index">退出</a></li>
+            <li><a href="#">帮助</a></li>
+            <li><a href="#">意见反馈</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="搜索一下...">
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-sm-2 col-md-1 sidebar">
+          <ul class="nav nav-sidebar">产品
+            <li data-type="pro_check"><a href="/manager?pageType=pro_check">产品查看</a></li>
+            <li data-type="pro_add"><a href="/manager?pageType=pro_add">产品添加</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">文档
+            <li data-type="doc_check"><a href="/manager?pageType=doc_check">文档查看</a></li>
+            <li data-type="doc_add"><a href="/manager?pageType=doc_add">文档添加</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">新闻
+            <li data-type="new_check"><a href="/manager?pageType=new_check">新闻查看</a></li>
+            <li data-type="new_add"><a href="/manager?pageType=new_add">新闻添加</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">留言
+            <li data-type="mes_check"><a href="/manager?pageType=mes_check">留言查看</a></li>
+          </ul>
+
+        </div>
+
+        <div id="user_content">
+            <%- include('', {realPath:'./manager/' + pageType + '.ejs'}) %>
+        </div> 
+        
+      </div>
+
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="javascripts/libs/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="javascripts/libs/bootstrap.min.js"></script>
+<script type="text/javascript" src="javascripts/manager.js"></script>
+<script type="text/javascript" src="javascripts/plugins/page.js"></script>
+</html>

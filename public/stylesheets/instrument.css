@@ -1,0 +1,167 @@
+.exhibition{
+	min-height: 30rem;
+}
+.web_content{
+	position: relative;
+	min-height: 150rem;
+}
+
+
+/*menu bar*/
+.menu-wrapper{
+	position: absolute;
+	left: 3rem;
+	top: 2rem;
+	margin-top: 1rem;
+	margin-left: 2rem;
+	width: 20rem;
+}
+.filterinput {
+	background-color: rgba(249, 244, 244, 0);
+	border-radius: 15px;
+	width: 90%;
+	height: 30px;
+	border: thin solid #FFF;
+	text-indent: 0.5em;
+	font-weight: bold;
+	color: #FFF;
+}
+#menu_list a {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+	cursor:default;
+}
+.submenu-indicator{
+	cursor:pointer;
+}
+
+
+/*product table*/
+.pro-wrapper{
+	position: absolute;
+	left: 35rem;
+	top: 1rem;
+	width: 120rem;
+	min-height: 110rem;
+}
+
+.pro-table{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	width: 100%;
+	min-height: 110rem;
+}
+
+.row{
+	display: inline-flex;
+	margin-top: 2rem;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: flex-start;
+}
+
+.pro-item{
+	display: inline-flex;
+	justify-content: center;
+	align-content: space-around;
+	flex-wrap: wrap;
+	position: relative;
+	margin-left: 2rem;
+	width: 316px;
+	height: 286px;
+	border: 1px solid #f0f0f0;
+	border-radius: 5px;
+	overflow: hidden;
+	font-family: 'Open Sans', sans-serif;
+	color: #555;
+	background: #fff;
+}
+
+.avatar-wrapper img{
+	display: block;
+	width: 300px;
+	height: 192px;
+	border-radius: 5px;
+}
+
+.pro-name{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 5rem;
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+}
+
+.pro-item:hover {
+	box-shadow: 0 5px 10px #cccccc;
+	transition: all 0.4s ease 0s;
+}
+
+/*page plugin*/
+.page-wrapper{
+	position: absolute;
+	display: inline-flex;
+	flex-wrap: wrap;
+	left: 25rem;
+	top: 110rem;
+	width: 100%;
+}
+
+
+/*product detal*/
+.detail-wrapper{
+	position: absolute;
+	left: 30rem;
+	top: 1rem;
+	width: 100rem;
+	min-height: 110rem;
+	border-radius: 5px;
+	border: 1px solid #cccccc;
+}
+
+.detail-avatar{
+	margin-top: 5rem;
+	padding-left: 32%;
+	margin-bottom: 3rem;
+	width: 100%;
+	height: 300px;
+}
+.detail-avatar img{
+	display: block;
+	border-radius: 5px;
+	width: 359px;
+	height: 260px;
+}
+
+.details{
+	padding-left: 22%;
+	width: 60%;
+}
+
+.details h1{
+	font-size: 1.5rem;
+}
+
+.details p{
+	font-size: 1.3rem;
+}
+
+.detail-back{
+	position: absolute;
+	right: 2rem;
+	display: block;
+	font-size: 1.2rem;
+	color: #cccccc;
+}
+
+.detail-back:hover{
+	color: #000;
+	cursor: pointer;
+}

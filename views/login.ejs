@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <title><%=title%></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta name="description" content="重庆远华仪表">
+  <link rel="stylesheet" type="text/css" href="stylesheets/libs/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/login.css" />
+</head>
+<body id="banner" class="banner0">
+  <div class="container-flux " >
+    <form method="post" action="/login" class="form-horizontal col-md-3" role="form">
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="account">帐号：</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" id="account" name="account" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="password">密码：</label>
+        <div class="col-sm-7">
+          <input type="password" class="form-control" id="password" name="password"/>
+        </div>
+      </div>
+      <div class="row">
+        <button type="reset" class="btn btn-default col-sm-2" id="reset">重置</button>
+        <button type="submit" class="btn btn-default col-sm-2" id="submit">登录</button>
+      </div>
+    </form>
+
+  </div>
+</body>
+
+<script type="text/javascript" src="javascripts/libs/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="javascripts/libs/bootstrap.min.js"></script>
+<script type="text/javascript">
+  $(function(){
+    function changeBanner(){
+      $banner = $('#banner');
+      switch($banner.attr('class')){
+        case "banner0":
+        $banner.removeClass();
+        $banner.addClass("banner1");
+        break;
+        case "banner1":
+        $banner.removeClass();
+        $banner.addClass("banner2");
+        break;
+        case "banner2":
+        $banner.removeClass();
+        $banner.addClass("banner0");
+        break;
+      }
+    }
+    setInterval(changeBanner,3000);
+  });
+</script>
+</html>

@@ -1,0 +1,88 @@
+.idea{
+	min-height: 150rem;
+}
+.idea>div:nth-child(1){
+	font-family: 微软雅黑;
+	color: #BFBFBF;
+	font-size: 2.4rem;
+	text-align: center;
+	margin-top: 10rem;
+}
+.idea>div:nth-child(2){
+	font-family: Arial;
+	color: rgb(139, 139, 139);
+	font-size: 4rem;
+	line-height: 1.5rem;
+	text-align: center;
+	margin-top: 2rem;
+}
+.idea>div:nth-child(3){
+	font-family: 微软雅黑;
+	color: rgb(139, 139, 139);
+	font-size: 1.6rem;
+	line-height: 2rem;
+	text-align: center;
+	margin-top: 6rem;
+	word-wrap: break-word; 
+}
+.idea>div:nth-child(4){
+	font-family: 微软雅黑;
+	color: rgb(139, 139, 139);
+	font-size: 1.2rem;
+	line-height: 1.6rem;
+	text-align: center;
+	margin-top: 2rem;
+	word-wrap: break-word; 
+}
+.idea>div:nth-child(5){
+	margin-top: 10rem;
+	text-align: center;
+	margin-left: -3rem;
+}
+.idea>div:nth-child(5) img{
+	margin-left: 3rem;
+}
+.idea>img{
+	height: 9rem;
+	width: 9rem;
+	margin-left: 47.2%;
+	margin-top: 10rem;
+}
+.article{
+	text-align: center;
+}
+.article img{
+	height: 9rem;
+	width: 9rem;
+	margin-top: 10rem;
+}
+}
+article{
+	margin-top: 6rem;
+	width: 100%;
+	margin-left: 10%;
+}
+article div{
+	width: 100%;
+}
+article p{
+	text-align: center;
+	color:rgb(102, 102, 102);
+	font-size: 1.6rem;
+	font-family: sans-serif;
+	line-height: 3.5rem;
+	margin-top: 3rem;
+	width: 80%;
+	margin-left: 10%;
+	color: rgb(102, 102, 102);
+	text-align: center;
+	word-wrap: break-word; 
+}
+.idea .footer{
+	padding-left: 25%;
+	margin-top: 10rem;
+}
+@media only screen and (max-width: 30em){
+	.idea2 img{display: none;}
+	.footer img{display: none;}
+}

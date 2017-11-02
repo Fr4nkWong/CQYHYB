@@ -45,29 +45,59 @@ $(document).ready(function(){
     });
   })(window, $, getQueryString)
   /*
-  delete option
+  delete, details option
   */
   $('#user_content').on('click', function(e){
-  		if($(e.target).hasClass('del')){
-  			console.log("enter del");
-  			var pageType = getQueryString("pageType");
-  			var id = $(e.target.parentNode.parentNode).attr('data-id');
-  			console.log(pageType+":"+id);
-  			$.ajax({
-  				type:"post",
-					url:"/manager/delete",
-					dataType:"json",
-					data:{"pageType":pageType,"id":id},
-					success:function(data){
-						alert(data.msg);
-					},
-					error:function(e){
-						var a = JSON.stringify(e);
-						console.log("error : "+a);
-						alert('抱歉服务器出现了一点状况');
-					}
-  			});
-  		}
+		if($(e.target).hasClass('del')){
+			console.log("enter del");
+			var pageType = getQueryString("pageType");
+			var id = $(e.target.parentNode.parentNode).attr('data-id');
+			console.log(pageType+":"+id);
+			$.ajax({
+				type:"post",
+				url:"/manager/delete",
+				dataType:"json",
+				data:{"pageType":pageType,"id":id},
+				success:function(data){
+					alert(data.msg);
+				},
+				error:function(e){
+					var a = JSON.stringify(e);
+					console.log("error : "+a);
+					alert('抱歉服务器出现了一点状况');
+				}
+			});
+		}
+    if($(e.target).hasClass('check')){
+      $(".detail-wrapper").css({"display":"flex"});
+      var $detail = $(".detail");
+      $detail.html();
+      console.log("enter check");
+      var pageType = getQueryString("pageType");
+      var id = $(e.target.parentNode.parentNode).attr('data-id');
+      console.log(pageType+":"+id);
+      $.ajax({
+        type:"post",
+        url:"/manager/check",
+        dataType:"json",
+        data:{"pageType":pageType,"id":id},
+        success:function(data){
+          var info = "";
+          if(data.result.info){
+            info = data.result.info;
+          }
+          if(data.result.content){
+            info = data.result.content;
+          }
+          $detail.html(info);
+        },
+        error:function(e){
+          var a = JSON.stringify(e);
+          console.log("error : "+a);
+          alert('文档不支持此查看方式哦');
+        }
+      });
+    }
     if($(e.target).attr('page-data')){
       var pageNumber = $(e.target).attr('page-data');
       var pageType = getQueryString("pageType");
@@ -95,6 +125,11 @@ $(document).ready(function(){
         alert('抱歉服务器出现了一点状况');
       }
     });
+  });
+
+  /*back option*/
+  $(".back").on("click", function(e){
+    $(".detail-wrapper").css({"display":"none"});
   });
 
 });

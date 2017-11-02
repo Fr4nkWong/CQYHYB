@@ -113,11 +113,51 @@ var ManagerDao = {
     });
   },
 
+  filterCheck:function(pageType, id){
+    var type = pageType;
+    var sql = "";
+    var values = [];
+    var arr = [];
+    switch(type){
+      case 'pro_check':
+      type = 'product';
+      values = [id];
+      sql = "SELECT info FROM "+type+" WHERE id = ?";
+      break;
+      case 'new_check':
+      type = 'news';
+      values = [id];
+      sql = "SELECT content FROM " +type+ " WHERE id = ?";
+      break;
+      case 'mes_check':
+      type = 'message';
+      values = [id];
+      sql = "SELECT content FROM " +type+ " WHERE id = ?";
+      break;
+    }
+    arr = [values, sql];
+    return arr;
+  },
+
+  check:function(pageType, id, callback){
+    var arr = ManagerDao.filterCheck(pageType, id);
+    var values = arr[0];
+    var sql = arr[1];
+    console.log(sql);
+    dbc.exec(sql, values, function(err, rows){
+      if(err){
+        return callback(err);
+      }
+      //rows是一个对象数组
+      console.log("[!!!]rows:"+JSON.stringify(rows[0]));
+      callback(err, rows);
+    });
+  },
+
   pageNumber:function(pageType, callback){
     var type = ManagerDao.screen(pageType);
     var sql = "SELECT COUNT(*) as count FROM "+type;
     var values = [];
-    console.log(sql);
     dbc.exec(sql, values, function(err, rows){
       if(err){
         return callback(err);

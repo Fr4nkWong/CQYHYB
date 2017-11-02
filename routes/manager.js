@@ -179,12 +179,27 @@ router.post('/page', function(req, res, next){
 	var data = JSON.stringify(req.body);
 	var obj = JSON.parse(data);
 	var pageType = obj.pageType;
-	console.log(obj);
 	managerDao.pageNumber(pageType, function(err, result){
 		if(err){ 
 			return next(err);
 		}else{
 			res.json({"num": result[0]});
+		}
+	});
+});
+
+/*handle detail option*/
+router.post('/check', function(req, res, next){
+	var data = JSON.stringify(req.body);
+	var obj = JSON.parse(data);
+	var pageType = obj.pageType;
+	var id = obj.id;
+	console.log(obj);
+	managerDao.check(pageType, id, function(err, result){
+		if(err){ 
+			return next(err);
+		}else{
+			res.json({"result": result[0]});
 		}
 	});
 });

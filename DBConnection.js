@@ -4,8 +4,8 @@ var mysql = require('mysql');
 var option = {
   host     : 'localhost',
   port     : '3306',
-  user     : 'root',
-  password : '680523',
+  user     : 'name',
+  password : 'pwd',
   database : 'cqyhyb'
 };
 
